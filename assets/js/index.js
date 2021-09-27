@@ -1,18 +1,15 @@
 const calc_S_P = () => {
   const S = document.getElementById("S");
   const P = document.getElementById("P");
-  let horizontal = input1.value;
-  let vertical = input2.value;
+  let circleDiameter = input1.value;
 
-  S.textContent = "Площадь: " + horizontal * vertical;
-  P.textContent = "Периметр: " + (horizontal * 2 + vertical * 2);
+  S.textContent =
+    "Площадь круга: " + (Math.PI * (circleDiameter * circleDiameter)) / 4;
+  P.textContent = "Длина окружности: " + Math.PI * circleDiameter;
 };
 
-const input1 = document.getElementById("input_h");
+const input1 = document.getElementById("input_d");
 input1.addEventListener("input", calc_S_P);
 
-const input2 = document.getElementById("input_v");
-input2.addEventListener("input", calc_S_P);
-
-// Start 17:06
-// Finish 17:13
+// Start 17:20
+// Finish 17:38
